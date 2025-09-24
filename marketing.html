@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>营销内容分享社区 - 思拓合众</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- 顶部搜索栏 -->
+    <div class="bg-white border-b border-gray-200 sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <div class="flex items-center space-x-1">
+                        <span class="text-blue-600 font-bold text-lg">CMS</span>
+                        <span class="text-orange-500 font-bold text-lg">T</span>
+                        <i class="fas fa-fire text-orange-500 text-lg"></i>
+                        <span class="text-orange-500 font-bold text-lg">P</span>
+                    </div>
+                    <span class="text-gray-800 font-medium text-sm ml-2">营销社区</span>
+                </div>
+                
+                <!-- 搜索框 -->
+                <div class="flex-1 max-w-2xl mx-8">
+                    <div class="relative">
+                        <input type="text" placeholder="请输入搜索关键词" 
+                               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <button class="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- 用户操作 -->
+                <div class="flex items-center space-x-4">
+                    <button class="px-4 py-2 text-gray-600 hover:text-blue-600">
+                        <i class="fas fa-plus mr-2"></i>发布内容
+                    </button>
+                    <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+                        <i class="fas fa-user mr-2"></i>登录
+                    </button>
+                </div>
+            </div>
+            
+            <!-- 导航标签 -->
+            <div class="flex items-center space-x-8 mt-4">
+                <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded-lg">综合</a>
+                <a href="#" class="px-4 py-2 text-gray-600 hover:text-blue-600">文章</a>
+                <a href="#" class="px-4 py-2 text-gray-600 hover:text-blue-600">用户</a>
+                <a href="#" class="px-4 py-2 text-gray-600 hover:text-blue-600">问答</a>
+                <a href="#" class="px-4 py-2 text-gray-600 hover:text-blue-600">课程</a>
+                <a href="#" class="px-4 py-2 text-gray-600 hover:text-blue-600">视频</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 主要内容区域 -->
+    <div class="container mx-auto px-6 py-8">
+        <div class="flex gap-8">
+            <!-- 左侧主要内容 -->
+            <div class="flex-1">
+                <!-- 推荐文章标题 -->
+                <div class="mb-6">
+                    <h2 class="text-2xl font-bold text-gray-900">推荐文章</h2>
+                </div>
+                
+                <!-- 文章列表 -->
+                <div class="space-y-6">
+                    <!-- 文章卡片1 -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="flex">
+                            <div class="w-48 h-32 flex-shrink-0">
+                                <img src="https://cz.9466.com/static/images/marketing-article1.jpg" 
+                                     alt="AI团队" class="w-full h-full object-cover"
+                                     onerror="this.src='https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop'">
+                            </div>
+                            <div class="flex-1 p-6">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                                    当AI成了你的团队：一人公司正在变现实
+                                </h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    从编程到运营，AI正在重塑创业模式。探讨"一人公司"如何利用AI工具完成从创意到产品的全流程，实现真正的个人创业。
+                                </p>
+                                <div class="flex items-center justify-between text-sm text-gray-500">
+                                    <span>Aine 18小时前</span>
+                                    <span>阅读 530</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 文章卡片2 -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="flex">
+                            <div class="w-48 h-32 flex-shrink-0">
+                                <img src="https://newsapp.cmstop.com/static/images/marketing-article2.jpg" 
+                                     alt="产品经理" class="w-full h-full object-cover"
+                                     onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop'">
+                            </div>
+                            <div class="flex-1 p-6">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                                    产品经理认知体系《订单篇》：从正向到逆向，一文搞懂订单系统设计
+                                </h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    订单系统贯穿整个电商业务链条，从交易到售后，涉及正向订单和逆向订单的设计要点和业务逻辑。
+                                </p>
+                                <div class="flex items-center justify-between text-sm text-gray-500">
+                                    <span>观剑·1天前</span>
+                                    <span>阅读 351</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 文章卡片3 -->
+                    <div class="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="flex">
+                            <div class="w-48 h-32 flex-shrink-0">
+                                <img src="https://vms.9466.com/static/images/marketing-article3.jpg" 
+                                     alt="财务共享" class="w-full h-full object-cover"
+                                     onerror="this.src='https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=300&fit=crop'">
+                            </div>
+                            <div class="flex-1 p-6">
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">
+                                    财务共享中心：背景、概念、制度、流程、架构及遇到的挑战
+                                </h3>
+                                <p class="text-gray-600 text-sm mb-3">
+                                    深入解析财务共享中心的背景、概念、适用企业类型、部门设置、制度流程、技术架构以及可能遇到的问题。
+                                </p>
+                                <div class="flex items-center justify-between text-sm text-gray-500">
+                                    <span>围炉喝茶聊产品 20小时前</span>
+                                    <span>阅读 333</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 右侧边栏 -->
+            <div class="w-80 flex-shrink-0">
+                <!-- 最近搜索 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold text-gray-900">最近搜索</h3>
+                        <button class="text-sm text-gray-500 hover:text-gray-700">全部清除</button>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="text-sm text-gray-600 hover:text-blue-600 cursor-pointer">邀请码</div>
+                        <div class="text-sm text-gray-600 hover:text-blue-600 cursor-pointer">用户旅程图</div>
+                        <div class="text-sm text-gray-600 hover:text-blue-600 cursor-pointer">cursor原型图</div>
+                        <div class="text-sm text-gray-600 hover:text-blue-600 cursor-pointer">cursor</div>
+                        <div class="text-sm text-gray-600 hover:text-blue-600 cursor-pointer">广告报表分析</div>
+                    </div>
+                </div>
+                
+                <!-- 热搜榜 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-lg font-semibold text-gray-900">热搜榜</h3>
+                        <button class="text-sm text-gray-500 hover:text-gray-700">查看榜单</button>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-red-500 text-white text-xs rounded flex items-center justify-center mr-3">1</div>
+                            <span class="text-sm text-gray-700 flex-1">竞品分析</span>
+                            <span class="text-xs text-gray-500">25980</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-red-500 text-white text-xs rounded flex items-center justify-center mr-3">2</div>
+                            <span class="text-sm text-gray-700 flex-1">PRD</span>
+                            <span class="text-xs text-gray-500">16023</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-red-500 text-white text-xs rounded flex items-center justify-center mr-3">3</div>
+                            <span class="text-sm text-gray-700 flex-1">需求分析</span>
+                            <span class="text-xs text-gray-500">12626</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-orange-500 text-white text-xs rounded flex items-center justify-center mr-3">4</div>
+                            <span class="text-sm text-gray-700 flex-1">用户画像</span>
+                            <span class="text-xs text-gray-500">11052</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-orange-500 text-white text-xs rounded flex items-center justify-center mr-3">5</div>
+                            <span class="text-sm text-gray-700 flex-1">面试</span>
+                            <span class="text-xs text-gray-500">10280</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-orange-500 text-white text-xs rounded flex items-center justify-center mr-3">6</div>
+                            <span class="text-sm text-gray-700 flex-1">axure</span>
+                            <span class="text-xs text-gray-500">10241</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-orange-500 text-white text-xs rounded flex items-center justify-center mr-3">7</div>
+                            <span class="text-sm text-gray-700 flex-1">SaaS</span>
+                            <span class="text-xs text-gray-500">8100</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-6 h-6 bg-orange-500 text-white text-xs rounded flex items-center justify-center mr-3">8</div>
+                            <span class="text-sm text-gray-700 flex-1">流程图</span>
+                            <span class="text-xs text-gray-500">6487</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

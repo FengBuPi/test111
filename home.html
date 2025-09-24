@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>首页 - 思拓合众</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- 轮播图样式 -->
+    <style>
+        .carousel-slide {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        .carousel-slide.active {
+            display: block;
+            opacity: 1;
+        }
+        
+        .carousel-dot.active {
+            background-color: rgba(255, 255, 255, 0.9) !important;
+        }
+        
+        .carousel-dot:hover {
+            background-color: rgba(255, 255, 255, 0.75) !important;
+        }
+        
+        #prevBtn:hover, #nextBtn:hover {
+            background-color: rgba(255, 255, 255, 0.3) !important;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- 产品轮播区 -->
+    <section class="hero relative overflow-hidden">
+        <div class="container">
+            <!-- 轮播图容器 -->
+            <div class="relative">
+                <!-- 产品轮播 -->
+                <div id="productCarousel" class="relative">
+                    <!-- 智媒管家 -->
+                    <div class="carousel-slide active">
+                        <div class="hero-content text-center">
+                            <div class="mb-8">
+                                <a href="http://newsapp.cmstop.com/" target="_blank">
+                                    <img src="https://newsapp.cmstop.com/static/images/zhimei-logo.png" 
+                                         alt="智媒管家V3.10" 
+                                         class="w-32 h-32 rounded-xl shadow-2xl mx-auto object-cover hover:shadow-3xl transition-shadow duration-300 cursor-pointer"
+                                         onerror="this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop'">
+                                </a>
+                            </div>
+                            <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fadeInUp">
+                                智媒管家
+                                <span class="block text-accent-400">智能化一站式新媒体运营管理系统</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl text-blue-100 mb-4 max-w-4xl mx-auto animate-fadeInUp">
+                                多终端一体化 采编审发营评 自媒体矩阵管理
+                            </p>
+                            <p class="text-lg text-blue-200 mb-8 max-w-4xl mx-auto animate-fadeInUp">
+                                面向媒体机构与宣传部门，提供智能化一站式新媒体运营管理系统，支持"手机新闻客户端 + 手机网站+ PC网站 + 自媒体矩阵 + PC后台管+ 移动采编"一站式管理。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 视频大脑 -->
+                    <div class="carousel-slide">
+                        <div class="hero-content text-center">
+                            <div class="mb-8">
+                                <a href="https://vms.9466.com/home/" target="_blank">
+                                    <img src="https://vms.9466.com/static/images/video-brain-logo.png" 
+                                         alt="视频大脑" 
+                                         class="w-32 h-32 rounded-xl shadow-2xl mx-auto object-cover hover:shadow-3xl transition-shadow duration-300 cursor-pointer"
+                                         onerror="this.src='https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=300&fit=crop'">
+                                </a>
+                            </div>
+                            <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fadeInUp">
+                                视频大脑
+                                <span class="block text-accent-400">短视频营销数智化平台</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl text-blue-100 mb-4 max-w-4xl mx-auto animate-fadeInUp">
+                                短视频素材管理 跨平台多账户投流 矩阵运营与数据分析
+                            </p>
+                            <p class="text-lg text-blue-200 mb-8 max-w-4xl mx-auto animate-fadeInUp">
+                                面向视频电商品牌企业、营销公司和MCN机构，提供短视频素材管理、跨平台多账户广告投流、矩阵运营与数据分析，支持团队协同、素材复用、归因分析。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 达人管家 -->
+                    <div class="carousel-slide">
+                        <div class="hero-content text-center">
+                            <div class="mb-8">
+                                <a href="https://kol.9466.com/home" target="_blank">
+                                    <img src="https://kol.9466.com/static/images/talent-manager-logo.png" 
+                                         alt="达人管家" 
+                                         class="w-32 h-32 rounded-xl shadow-2xl mx-auto object-cover hover:shadow-3xl transition-shadow duration-300 cursor-pointer"
+                                         onerror="this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=400&h=300&fit=crop'">
+                                </a>
+                            </div>
+                            <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fadeInUp">
+                                达人管家
+                                <span class="block text-accent-400">达人营销数智化平台</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl text-blue-100 mb-4 max-w-4xl mx-auto animate-fadeInUp">
+                                找达人 管业务 控效果 能复盘
+                            </p>
+                            <p class="text-lg text-blue-200 mb-8 max-w-4xl mx-auto animate-fadeInUp">
+                                达人营销数智化平台，商达合作全程赋能，运营决策有数可依。找达人、管业务、控效果、能复盘、保人效、存资产，轻松搞定。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- CreBee -->
+                    <div class="carousel-slide">
+                        <div class="hero-content text-center">
+                            <div class="mb-8">
+                                <a href="https://www.crebee.cn/" target="_blank">
+                                    <img src="https://www.crebee.cn/static/images/crebee-logo.png" 
+                                         alt="CreBee" 
+                                         class="w-32 h-32 rounded-xl shadow-2xl mx-auto object-cover hover:shadow-3xl transition-shadow duration-300 cursor-pointer"
+                                         onerror="this.src='https://images.unsplash.com/photo-1558655146-d09347e92766?w=400&h=300&fit=crop'">
+                                </a>
+                            </div>
+                            <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fadeInUp">
+                                CreBee
+                                <span class="block text-accent-400">短视频矩阵运营助手</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl text-blue-100 mb-4 max-w-4xl mx-auto animate-fadeInUp">
+                                跨平台多账号管理 视频一键分发 数据自动汇总
+                            </p>
+                            <p class="text-lg text-blue-200 mb-8 max-w-4xl mx-auto animate-fadeInUp">
+                                跨平台多账号统一分发管理，轻松撬动9大平台免费流量。视频一键分发，数据自动汇总，图表多维分析，报表一键导出。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- 创作助手 -->
+                    <div class="carousel-slide">
+                        <div class="hero-content text-center">
+                            <div class="mb-8">
+                                <a href="https://cz.9466.com/" target="_blank">
+                                    <img src="https://cz.9466.com/static/images/creator-assistant-logo.png" 
+                                         alt="创作助手" 
+                                         class="w-32 h-32 rounded-xl shadow-2xl mx-auto object-cover hover:shadow-3xl transition-shadow duration-300 cursor-pointer"
+                                         onerror="this.src='https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=300&fit=crop'">
+                                </a>
+                            </div>
+                            <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fadeInUp">
+                                创作助手
+                                <span class="block text-accent-400">新媒体文稿创作智能工具集</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl text-blue-100 mb-4 max-w-4xl mx-auto animate-fadeInUp">
+                                多模态创作 多平台发布 AI智能工具集
+                            </p>
+                            <p class="text-lg text-blue-200 mb-8 max-w-4xl mx-auto animate-fadeInUp">
+                                面向自媒体博主、媒体记者编辑、企业营销和机构宣传人员，提供新媒体文稿创作智能工具集，支持多模态创作/多场景应用/多平台发布/多系统接入/多终端协同/多模型选择。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- CmsTop媒体版 -->
+                    <div class="carousel-slide">
+                        <div class="hero-content text-center">
+                            <div class="mb-8">
+                                <a href="https://www.cmstop.com/product/media/" target="_blank">
+                                    <img src="https://www.cmstop.com/static/images/cmstop-media-logo.png" 
+                                         alt="CmsTop媒体版" 
+                                         class="w-32 h-32 rounded-xl shadow-2xl mx-auto object-cover hover:shadow-3xl transition-shadow duration-300 cursor-pointer"
+                                         onerror="this.src='https://images.unsplash.com/photo-1504711331083-9c895941bf81?w=400&h=300&fit=crop'">
+                                </a>
+                            </div>
+                            <h1 class="text-5xl md:text-6xl font-bold mb-6 animate-fadeInUp">
+                                CmsTop媒体版
+                                <span class="block text-accent-400">单站点融媒体系统解决方案</span>
+                            </h1>
+                            <p class="text-xl md:text-2xl text-blue-100 mb-4 max-w-4xl mx-auto animate-fadeInUp">
+                                PC站 手机站 手机端 平板端
+                            </p>
+                            <p class="text-lg text-blue-200 mb-8 max-w-4xl mx-auto animate-fadeInUp">
+                                面向媒体提供"PC站＋手机站＋手机端＋平板端"多终端一体化融媒体系统解决方案，助力媒体融合发展。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 轮播控制按钮 -->
+                <button id="prevBtn" class="absolute left-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full flex items-center justify-center text-white text-xl transition-all duration-300">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button id="nextBtn" class="absolute right-4 top-1/2 transform -translate-y-1/2 w-12 h-12 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full flex items-center justify-center text-white text-xl transition-all duration-300">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                
+                <!-- 轮播指示器 -->
+                <div class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <button class="carousel-dot active w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300" data-slide="0"></button>
+                    <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300" data-slide="1"></button>
+                    <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300" data-slide="2"></button>
+                    <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300" data-slide="3"></button>
+                    <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300" data-slide="4"></button>
+                    <button class="carousel-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300" data-slide="5"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 核心价值 -->
+    <section class="py-16 bg-white">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">为什么选择思拓合众</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    20年媒体技术沉淀，800+客户信赖，多项资质认证，持续创新驱动
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center animate-fadeInUp">
+                    <div class="w-32 h-32 rounded-2xl overflow-hidden mx-auto mb-6 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=300&h=300&fit=crop" 
+                             alt="20年技术沉淀" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=300&h=300&fit=crop'">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">20年技术沉淀</h3>
+                    <p class="text-primary-600 font-medium mb-4">北京思拓合众科技有限公司</p>
+                    <p class="text-gray-600 text-lg">
+                        从PC互联网到移动互联网，再到AI时代，始终紧跟技术发展趋势，在CMS系统领域积累深厚经验
+                    </p>
+                </div>
+                
+                <div class="text-center animate-fadeInUp">
+                    <div class="w-32 h-32 rounded-2xl overflow-hidden mx-auto mb-6 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=300&h=300&fit=crop" 
+                             alt="800+客户信赖" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=300&h=300&fit=crop'">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">800+客户信赖</h3>
+                    <p class="text-accent-600 font-medium mb-4">人民日报社、新华社、中央纪委</p>
+                    <p class="text-gray-600 text-lg">
+                        服务人民日报社、新华社、中央纪委等知名客户，覆盖全国31个省市自治区，涵盖报业、广电、政府等多个领域
+                    </p>
+                </div>
+                
+                <div class="text-center animate-fadeInUp">
+                    <div class="w-32 h-32 rounded-2xl overflow-hidden mx-auto mb-6 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=300&h=300&fit=crop" 
+                             alt="多项资质认证" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop'">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">多项资质认证</h3>
+                    <p class="text-green-600 font-medium mb-4">高新技术企业、专精特新</p>
+                    <p class="text-gray-600 text-lg">
+                        高新技术企业、北京市"专精特新"中小企业、中关村"瞪羚企业"，中国新闻技术工作者联合会理事单位
+                    </p>
+                </div>
+                
+                <div class="text-center animate-fadeInUp">
+                    <div class="w-32 h-32 rounded-2xl overflow-hidden mx-auto mb-6 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=300&h=300&fit=crop" 
+                             alt="持续创新驱动" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://images.unsplash.com/photo-1558655146-d09347e92766?w=300&h=300&fit=crop'">
+                    </div>
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">持续创新驱动</h3>
+                    <p class="text-purple-600 font-medium mb-4">AI+SaaS战略</p>
+                    <p class="text-gray-600 text-lg">
+                        不断投入研发，推出AI+SaaS战略，从传统CMS到智能媒体管家，再到短视频矩阵运营，持续引领行业创新
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 产品概览 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">我们的产品矩阵</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    AI驱动的智能媒体技术产品，从传统CMS到短视频运营，全面覆盖媒体技术需求
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 智媒管家 -->
+                <div class="product-card animate-fadeInUp">
+                    <div class="product-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">智媒管家</h3>
+                    <p class="text-gray-600 mb-4">
+                        面向媒体机构与宣传部门，提供智能化一站式新媒体运营管理系统，支持"采、编、审、发、营、评"全程赋能
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1 mb-4">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>多终端一体化管理</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>自媒体矩阵管理</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>标品交付快速上线</li>
+                    </ul>
+                    <div class="mb-4">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500">适用场景</span>
+                            <span class="text-blue-600 font-medium">媒体机构</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm mt-1">
+                            <span class="text-gray-500">部署方式</span>
+                            <span class="text-green-600 font-medium">云端/本地</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="http://newsapp.cmstop.com/" target="_blank" class="btn btn-primary flex-1">了解更多</a>
+                        <a href="#help" class="btn btn-secondary px-3 relative group" title="使用手册">
+                            <i class="fas fa-book text-sm"></i>
+                            <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                                使用手册
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 视频大脑 -->
+                <div class="product-card animate-fadeInUp">
+                    <div class="product-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">视频大脑</h3>
+                    <p class="text-gray-600 mb-4">
+                        面向视频电商品牌企业、营销公司和MCN机构，提供短视频素材管理、跨平台多账户广告投流、矩阵运营与数据分析
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1 mb-4">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>短视频素材管理</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>跨平台多账户投流</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>矩阵运营与数据分析</li>
+                    </ul>
+                    <div class="mb-4">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500">适用场景</span>
+                            <span class="text-purple-600 font-medium">电商营销</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm mt-1">
+                            <span class="text-gray-500">支持平台</span>
+                            <span class="text-orange-600 font-medium">抖音/快手/腾讯</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="https://vms.9466.com/home/" target="_blank" class="btn btn-primary flex-1">了解更多</a>
+                        <a href="#help" class="btn btn-secondary px-3 relative group" title="使用手册">
+                            <i class="fas fa-book text-sm"></i>
+                            <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                                使用手册
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 达人管家 -->
+                <div class="product-card animate-fadeInUp">
+                    <div class="product-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">达人管家</h3>
+                    <p class="text-gray-600 mb-4">
+                        达人营销数智化平台，商达合作全程赋能，运营决策有数可依。找达人、管业务、控效果、能复盘、保人效、存资产，轻松搞定。
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1 mb-4">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>达人资源库</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>智能匹配推荐</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>合作流程管理</li>
+                    </ul>
+                    <div class="mb-4">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500">适用场景</span>
+                            <span class="text-green-600 font-medium">达人营销</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm mt-1">
+                            <span class="text-gray-500">核心功能</span>
+                            <span class="text-blue-600 font-medium">找管控复盘</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="https://kol.9466.com/home" target="_blank" class="btn btn-primary flex-1">了解更多</a>
+                        <a href="#help" class="btn btn-secondary px-3 relative group" title="使用手册">
+                            <i class="fas fa-book text-sm"></i>
+                            <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                                使用手册
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- CreBee -->
+                <div class="product-card animate-fadeInUp">
+                    <div class="product-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">CreBee</h3>
+                    <p class="text-gray-600 mb-4">
+                        短视频矩阵运营助手，跨平台多账号统一分发管理，轻松撬动9大平台免费流量。视频一键分发，数据自动汇总，图表多维分析，报表一键导出。
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1 mb-4">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>一键分发9大平台</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>自动汇总数据</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>智能分析洞察</li>
+                    </ul>
+                    <div class="mb-4">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500">适用场景</span>
+                            <span class="text-yellow-600 font-medium">矩阵运营</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm mt-1">
+                            <span class="text-gray-500">支持平台</span>
+                            <span class="text-orange-600 font-medium">9大主流平台</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="https://www.crebee.cn/" target="_blank" class="btn btn-primary flex-1">了解更多</a>
+                        <a href="#help" class="btn btn-secondary px-3 relative group" title="使用手册">
+                            <i class="fas fa-book text-sm"></i>
+                            <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                                使用手册
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 创作助手 -->
+                <div class="product-card animate-fadeInUp">
+                    <div class="product-icon">
+                        <i class="fas fa-pen-fancy"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">创作助手</h3>
+                    <p class="text-gray-600 mb-4">
+                        面向自媒体博主、媒体记者编辑、企业营销和机构宣传人员，提供新媒体文稿创作智能工具集，支持多模态创作/多场景应用/多平台发布/多系统接入/多终端协同/多模型选择。
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1 mb-4">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>AI智能创作</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>SaaS云服务</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>内容优化</li>
+                    </ul>
+                    <div class="mb-4">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500">适用场景</span>
+                            <span class="text-blue-600 font-medium">内容创作</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm mt-1">
+                            <span class="text-gray-500">服务模式</span>
+                            <span class="text-purple-600 font-medium">SaaS云服务</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="https://cz.9466.com/" target="_blank" class="btn btn-primary flex-1">了解更多</a>
+                        <a href="#help" class="btn btn-secondary px-3 relative group" title="使用手册">
+                            <i class="fas fa-book text-sm"></i>
+                            <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                                使用手册
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- CmsTop媒体版 -->
+                <div class="product-card animate-fadeInUp">
+                    <div class="product-icon">
+                        <i class="fas fa-newspaper"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">CmsTop媒体版</h3>
+                    <p class="text-gray-600 mb-4">
+                        面向媒体提供"PC站＋手机站＋手机端＋平板端"多终端一体化融媒体系统解决方案，助力媒体融合发展。
+                    </p>
+                    <ul class="text-sm text-gray-500 space-y-1 mb-4">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>内容管理</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>工作流管理</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>权限控制</li>
+                    </ul>
+                    <div class="mb-4">
+                        <div class="flex items-center justify-between text-sm">
+                            <span class="text-gray-500">适用场景</span>
+                            <span class="text-red-600 font-medium">媒体机构</span>
+                        </div>
+                        <div class="flex items-center justify-between text-sm mt-1">
+                            <span class="text-gray-500">终端支持</span>
+                            <span class="text-blue-600 font-medium">PC+移动+平板</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="https://www.cmstop.com/product/media/" target="_blank" class="btn btn-primary flex-1">了解更多</a>
+                        <a href="#help" class="btn btn-secondary px-3 relative group" title="使用手册">
+                            <i class="fas fa-book text-sm"></i>
+                            <div class="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 px-3 py-1 bg-gray-800 text-white text-xs rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap">
+                                使用手册
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 客户案例预览 -->
+    <section class="py-16 bg-white">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">服务全球海量客户的行业案例</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    思拓合众完善的服务体系为企业数字化上云保驾护航
+                    <a href="#cases" class="text-primary-600 hover:text-primary-700 ml-2">查看更多客户案例 <i class="fas fa-chevron-right"></i></a>
+                </p>
+            </div>
+            
+            <!-- 案例展示区域 -->
+            <div class="mb-16">
+                <div class="flex flex-col lg:flex-row justify-center items-center lg:space-x-8 space-y-8 lg:space-y-0">
+                    <!-- 案例卡片1 -->
+                    <div class="w-80 bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-red-500 to-red-600 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-newspaper text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">人民日报社</h3>
+                                <p class="text-sm text-gray-500">中央级媒体</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            通过智媒管家V3.10实现内容管理数字化转型，提升内容发布效率40%，支持多终端一体化发布，为读者提供更好的阅读体验。
+                        </p>
+                        <div class="text-right">
+                            <span class="text-sm text-gray-400">——人民日报社</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 案例卡片2 -->
+                    <div class="w-80 bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-broadcast-tower text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">湖北广播电视台</h3>
+                                <p class="text-sm text-gray-500">省级媒体</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            基于长江云模式打造省级媒体技术平台，实现融媒体中心建设，覆盖全省县级融媒体中心，成为行业标准参考蓝本。
+                        </p>
+                        <div class="text-right">
+                            <span class="text-sm text-gray-400">——湖北广播电视台</span>
+                        </div>
+                    </div>
+                    
+                    <!-- 案例卡片3 -->
+                    <div class="w-80 bg-white rounded-xl shadow-lg border border-gray-100 p-6 hover:shadow-xl transition-shadow duration-300">
+                        <div class="flex items-center mb-4">
+                            <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-green-600 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-graduation-cap text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-900">中国教育电视台</h3>
+                                <p class="text-sm text-gray-500">教育媒体</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                            运用视频大脑和CreBee产品，实现教育内容的智能化制作和分发，提升教育内容传播效果，覆盖更多受众群体。
+                        </p>
+                        <div class="text-right">
+                            <span class="text-sm text-gray-400">——中国教育电视台</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 客户Logo网格 -->
+            <div class="grid grid-cols-3 md:grid-cols-6 gap-4">
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">人民日报</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">新华社</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">中央纪委</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">中国青年报</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">中国教育电视台</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">中国航空报</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">新京报社</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">解放日报社</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">新华日报社</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">湖北日报社</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">新疆日报社</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">深圳报业集团</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">长江日报社</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">青岛日报社</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">哈尔滨日报社</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">南宁日报社</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">绍兴市新闻传媒集团</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">财经网</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">ELLE</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">瑞丽</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">中国出版集团</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">北汽集团</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">赫斯特集团</span>
+                </div>
+                <div class="bg-gray-50 rounded-lg p-4 flex items-center justify-center h-20 hover:bg-gray-100 transition-colors duration-300">
+                    <span class="text-sm font-medium text-gray-700">更多客户...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- CTA区域 -->
+    <section class="py-16 bg-gradient-to-r from-primary-600 to-primary-700">
+        <div class="container">
+            <div class="text-center text-white">
+                <h2 class="text-4xl font-bold mb-4">准备开始您的内容创作之旅？</h2>
+                <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                    了解我们的产品，享受专业的智能媒体技术服务
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="btn btn-accent text-lg px-8 py-4">
+                        <i class="fas fa-phone mr-2"></i>
+                        联系销售
+                    </a>
+                    <a href="products.html" class="btn btn-secondary text-lg px-8 py-4">
+                        <i class="fas fa-search mr-2"></i>
+                        了解产品
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 统计数据 -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="container">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="animate-fadeInUp">
+                    <div class="text-4xl font-bold text-accent-400 mb-2">1000+</div>
+                    <div class="text-gray-300">服务企业</div>
+                </div>
+                <div class="animate-fadeInUp">
+                    <div class="text-4xl font-bold text-accent-400 mb-2">50万+</div>
+                    <div class="text-gray-300">内容作品</div>
+                </div>
+                <div class="animate-fadeInUp">
+                    <div class="text-4xl font-bold text-accent-400 mb-2">300%</div>
+                    <div class="text-gray-300">效率提升</div>
+                </div>
+                <div class="animate-fadeInUp">
+                    <div class="text-4xl font-bold text-accent-400 mb-2">99.9%</div>
+                    <div class="text-gray-300">服务可用性</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 轮播图JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            const dots = document.querySelectorAll('.carousel-dot');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let currentSlide = 0;
+            let autoSlideInterval;
+            
+            // 显示指定幻灯片
+            function showSlide(index) {
+                // 隐藏所有幻灯片
+                slides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                
+                // 移除所有指示器的激活状态
+                dots.forEach(dot => {
+                    dot.classList.remove('active');
+                });
+                
+                // 显示当前幻灯片
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+                
+                currentSlide = index;
+            }
+            
+            // 下一张幻灯片
+            function nextSlide() {
+                const nextIndex = (currentSlide + 1) % slides.length;
+                showSlide(nextIndex);
+            }
+            
+            // 上一张幻灯片
+            function prevSlide() {
+                const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+                showSlide(prevIndex);
+            }
+            
+            // 自动轮播
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(nextSlide, 5000); // 5秒切换一次
+            }
+            
+            // 停止自动轮播
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+            
+            // 事件监听器
+            nextBtn.addEventListener('click', () => {
+                nextSlide();
+                stopAutoSlide();
+                startAutoSlide(); // 重新开始自动轮播
+            });
+            
+            prevBtn.addEventListener('click', () => {
+                prevSlide();
+                stopAutoSlide();
+                startAutoSlide(); // 重新开始自动轮播
+            });
+            
+            // 指示器点击事件
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    showSlide(index);
+                    stopAutoSlide();
+                    startAutoSlide(); // 重新开始自动轮播
+                });
+            });
+            
+            // 鼠标悬停时停止自动轮播
+            const carousel = document.getElementById('productCarousel');
+            carousel.addEventListener('mouseenter', stopAutoSlide);
+            carousel.addEventListener('mouseleave', startAutoSlide);
+            
+            // 键盘导航
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowLeft') {
+                    prevSlide();
+                    stopAutoSlide();
+                    startAutoSlide();
+                } else if (e.key === 'ArrowRight') {
+                    nextSlide();
+                    stopAutoSlide();
+                    startAutoSlide();
+                }
+            });
+            
+            // 启动自动轮播
+            startAutoSlide();
+        });
+        
+    </script>
+</body>
+</html>

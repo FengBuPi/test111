@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>营销案例 - 思拓合众</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+    <!-- 页面头部 -->
+    <section class="py-12 bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 relative overflow-hidden">
+        <!-- 背景装饰 -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-green-200 to-emerald-200 opacity-30 rounded-full -translate-y-32 translate-x-32"></div>
+        <div class="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-teal-200 to-green-200 opacity-30 rounded-full translate-y-24 -translate-x-24"></div>
+        <div class="absolute top-1/2 left-1/2 w-32 h-32 bg-gradient-to-r from-emerald-200 to-cyan-200 opacity-20 rounded-full -translate-x-16 -translate-y-16"></div>
+        
+        <div class="container relative z-10">
+            <div class="text-center max-w-4xl mx-auto">
+                <!-- 图标区域 -->
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl mb-6 shadow-lg">
+                    <i class="fas fa-trophy text-white text-2xl"></i>
+                </div>
+                
+                <!-- 标题 -->
+                <h1 class="text-4xl font-bold text-gray-900 mb-4" style="font-family: 'Poppins', sans-serif;">
+                    营销案例
+                </h1>
+                
+                <!-- 副标题 -->
+                <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                    看看我们如何帮助不同行业的企业和个人实现内容创作效率的显著提升
+                </p>
+                
+                <!-- 案例分类标签 -->
+                <div class="flex flex-wrap justify-center gap-3 mb-8">
+                    <span class="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">政府媒体</span>
+                    <span class="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium">企业客户</span>
+                    <span class="px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium">个人创作者</span>
+                    <span class="px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-sm font-medium">教育机构</span>
+                </div>
+                
+                <!-- 成功数据 -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-3xl mx-auto">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-green-600 mb-2">200%</div>
+                        <div class="text-sm text-gray-600">效率提升</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-blue-600 mb-2">95%</div>
+                        <div class="text-sm text-gray-600">客户满意度</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-purple-600 mb-2">500%</div>
+                        <div class="text-sm text-gray-600">流量增长</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange-600 mb-2">300%</div>
+                        <div class="text-sm text-gray-600">ROI提升</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 案例筛选 -->
+    <section class="py-8 bg-white border-b border-gray-200">
+        <div class="container">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="btn btn-primary filter-btn active" data-filter="all">全部案例</button>
+                <button class="btn btn-secondary filter-btn" data-filter="government">政府媒体</button>
+                <button class="btn btn-secondary filter-btn" data-filter="enterprise">企业客户</button>
+                <button class="btn btn-secondary filter-btn" data-filter="creator">个人创作者</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 案例列表 -->
+    <section class="py-16">
+        <div class="container">
+            <!-- 政府媒体案例 -->
+            <div class="case-section mb-16" data-category="government">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">政府媒体案例</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- 案例1 -->
+                    <div class="case-card">
+                        <div class="relative overflow-hidden rounded-xl mb-6">
+                            <img src="https://newsapp.cmstop.com/static/images/case-government.jpg" 
+                                 alt="某市政府媒体案例" 
+                                 class="w-full h-48 object-cover"
+                                 onerror="this.src='https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=300&fit=crop'">
+                            <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                政府媒体
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">某市政府新闻中心</h3>
+                            <p class="text-gray-600 mb-4">
+                                通过智媒管家平台，实现了多终端一体化管理，新闻发布效率提升200%，覆盖用户增长150%。
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                    <span><i class="fas fa-calendar mr-1"></i>2024年</span>
+                                    <span><i class="fas fa-users mr-1"></i>50+ 用户</span>
+                                </div>
+                                <a href="#" class="text-primary-600 hover:text-primary-700 font-medium">
+                                    查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 案例2 -->
+                    <div class="case-card">
+                        <div class="relative overflow-hidden rounded-xl mb-6">
+                            <img src="https://newsapp.cmstop.com/static/images/case-tv-station.jpg" 
+                                 alt="某省电视台案例" 
+                                 class="w-full h-48 object-cover"
+                                 onerror="this.src='https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?w=600&h=300&fit=crop'">
+                            <div class="absolute top-4 left-4 bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                政府媒体
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">某省电视台新媒体部</h3>
+                            <p class="text-gray-600 mb-4">
+                                使用视频大脑短视频营销平台，视频制作时间缩短60%，内容质量显著提升，观众满意度达到95%。
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                    <span><i class="fas fa-calendar mr-1"></i>2024年</span>
+                                    <span><i class="fas fa-users mr-1"></i>30+ 用户</span>
+                                </div>
+                                <a href="#" class="text-primary-600 hover:text-primary-700 font-medium">
+                                    查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 企业客户案例 -->
+            <div class="case-section mb-16" data-category="enterprise">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">企业客户案例</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <!-- 案例1 -->
+                    <div class="case-card">
+                        <div class="relative overflow-hidden rounded-xl mb-6">
+                            <img src="https://cz.9466.com/static/images/case-education.jpg" 
+                                 alt="某电商公司案例" 
+                                 class="w-full h-48 object-cover"
+                                 onerror="this.src='https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=300&fit=crop'">
+                            <div class="absolute top-4 left-4 bg-accent-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                企业客户
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">某知名电商公司</h3>
+                            <p class="text-gray-600 mb-4">
+                                通过达人管家达人营销数智化平台，精准匹配达人资源，营销ROI提升300%，品牌曝光量增长500%。
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                    <span><i class="fas fa-calendar mr-1"></i>2024年</span>
+                                    <span><i class="fas fa-users mr-1"></i>100+ 用户</span>
+                                </div>
+                                <a href="#" class="text-primary-600 hover:text-primary-700 font-medium">
+                                    查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 案例2 -->
+                    <div class="case-card">
+                        <div class="relative overflow-hidden rounded-xl mb-6">
+                            <img src="https://vms.9466.com/static/images/case-ecommerce.jpg" 
+                                 alt="某科技公司案例" 
+                                 class="w-full h-48 object-cover"
+                                 onerror="this.src='https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=300&fit=crop'">
+                            <div class="absolute top-4 left-4 bg-accent-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                企业客户
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">某科技公司市场部</h3>
+                            <p class="text-gray-600 mb-4">
+                                使用CmsTop媒体版单站点融媒体系统，建立统一的内容管理体系，团队协作效率提升250%，内容发布准确率达到99%。
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                    <span><i class="fas fa-calendar mr-1"></i>2024年</span>
+                                    <span><i class="fas fa-users mr-1"></i>80+ 用户</span>
+                                </div>
+                                <a href="#" class="text-primary-600 hover:text-primary-700 font-medium">
+                                    查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 案例3 -->
+                    <div class="case-card">
+                        <div class="relative overflow-hidden rounded-xl mb-6">
+                            <img src="https://vms.9466.com/static/images/case-ecommerce.jpg" 
+                                 alt="某教育机构案例" 
+                                 class="w-full h-48 object-cover"
+                                 onerror="this.src='https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=300&fit=crop'">
+                            <div class="absolute top-4 left-4 bg-accent-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                企业客户
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">某在线教育机构</h3>
+                            <p class="text-gray-600 mb-4">
+                                通过CreBee短视频矩阵运营助手和创作助手，课程内容创作效率提升400%，学员满意度达到98%。
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                    <span><i class="fas fa-calendar mr-1"></i>2024年</span>
+                                    <span><i class="fas fa-users mr-1"></i>60+ 用户</span>
+                                </div>
+                                <a href="#" class="text-primary-600 hover:text-primary-700 font-medium">
+                                    查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 个人创作者案例 -->
+            <div class="case-section mb-16" data-category="creator">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">个人创作者案例</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- 案例1 -->
+                    <div class="case-card">
+                        <div class="relative overflow-hidden rounded-xl mb-6">
+                            <img src="https://www.crebee.cn/static/images/case-creator.jpg" 
+                                 alt="某自媒体博主案例" 
+                                 class="w-full h-48 object-cover"
+                                 onerror="this.src='https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=300&fit=crop'">
+                            <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                个人创作者
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">某知名自媒体博主</h3>
+                            <p class="text-gray-600 mb-4">
+                                使用智媒管家和视频大脑，粉丝增长300%，月收入提升500%，成为行业头部博主。
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                    <span><i class="fas fa-calendar mr-1"></i>2024年</span>
+                                    <span><i class="fas fa-users mr-1"></i>个人用户</span>
+                                </div>
+                                <a href="#" class="text-primary-600 hover:text-primary-700 font-medium">
+                                    查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 案例2 -->
+                    <div class="case-card">
+                        <div class="relative overflow-hidden rounded-xl mb-6">
+                            <img src="https://www.cmstop.com/static/images/case-media.jpg" 
+                                 alt="某内容创作者案例" 
+                                 class="w-full h-48 object-cover"
+                                 onerror="this.src='https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&h=300&fit=crop'">
+                            <div class="absolute top-4 left-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                个人创作者
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">某内容创作工作室</h3>
+                            <p class="text-gray-600 mb-4">
+                                通过创作助手和CreBee短视频矩阵运营助手，内容创作效率提升350%，客户满意度达到100%。
+                            </p>
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4 text-sm text-gray-500">
+                                    <span><i class="fas fa-calendar mr-1"></i>2024年</span>
+                                    <span><i class="fas fa-users mr-1"></i>5人团队</span>
+                                </div>
+                                <a href="#" class="text-primary-600 hover:text-primary-700 font-medium">
+                                    查看详情 <i class="fas fa-arrow-right ml-1"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 客户证言 -->
+    <section class="py-16 bg-white">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">客户证言</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    听听我们的客户如何评价我们的产品和服务
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card text-center">
+                    <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-6 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" 
+                             alt="张总" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'">
+                    </div>
+                    <blockquote class="text-lg text-gray-600 mb-6">
+                        "智媒科技的产品真正解决了我们的痛点，内容创作效率提升了300%，团队协作更加顺畅。"
+                    </blockquote>
+                    <div class="flex items-center justify-center space-x-2 mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="font-semibold text-gray-900">张总</div>
+                    <div class="text-gray-500">某市政府新闻中心主任</div>
+                </div>
+                
+                <div class="testimonial-card text-center">
+                    <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-6 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=150&h=150&fit=crop&crop=face" 
+                             alt="李经理" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face'">
+                    </div>
+                    <blockquote class="text-lg text-gray-600 mb-6">
+                        "视频大脑的短视频营销平台太棒了，以前需要几小时的工作现在几分钟就能完成，质量还更好。"
+                    </blockquote>
+                    <div class="flex items-center justify-center space-x-2 mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="font-semibold text-gray-900">李经理</div>
+                    <div class="text-gray-500">某省电视台新媒体部主任</div>
+                </div>
+                
+                <div class="testimonial-card text-center">
+                    <div class="w-20 h-20 rounded-full overflow-hidden mx-auto mb-6 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face" 
+                             alt="王老师" 
+                             class="w-full h-full object-cover"
+                             onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'">
+                    </div>
+                    <blockquote class="text-lg text-gray-600 mb-6">
+                        "作为个人创作者，智媒科技的产品让我能够专注于内容创作，而不是繁琐的管理工作。"
+                    </blockquote>
+                    <div class="flex items-center justify-center space-x-2 mb-2">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <div class="font-semibold text-gray-900">王老师</div>
+                    <div class="text-gray-500">知名自媒体博主</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    
+    <!-- CTA区域 -->
+    <section class="py-16 bg-white">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">准备开始您的成功之旅？</h2>
+                <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+                    加入我们的成功客户行列，让思拓合众助力您的智能媒体技术发展
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#contact" class="btn btn-primary text-lg px-8 py-4">
+                        <i class="fas fa-phone mr-2"></i>
+                        联系我们
+                    </a>
+                    <a href="#products" class="btn btn-secondary text-lg px-8 py-4">
+                        <i class="fas fa-search mr-2"></i>
+                        了解产品
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // 案例筛选功能
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const caseSections = document.querySelectorAll('.case-section');
+            
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // 更新按钮状态
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('btn-primary', 'active');
+                        btn.classList.add('btn-secondary');
+                    });
+                    this.classList.remove('btn-secondary');
+                    this.classList.add('btn-primary', 'active');
+                    
+                    // 筛选案例
+                    caseSections.forEach(section => {
+                        if (filter === 'all' || section.getAttribute('data-category') === filter) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
